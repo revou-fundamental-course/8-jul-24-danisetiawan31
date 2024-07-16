@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+}
+
+.galaxy-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.stars, .twinkling {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.stars {
+    background: url('https://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+    animation: move-stars 200s linear infinite;
+}
+
+.twinkling {
+    background: url('https://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
+    animation: move-twinkling 200s linear infinite;
+}
+
+@keyframes move-stars {
+    to { transform: translateY(-1000px); }
+}
+
+@keyframes move-twinkling {
+    to { transform: translateY(-1000px); }
+}
+
+.container {
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    transition: border-color 0.3s;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #fe4567;
+    color: #f9f9f9;
+    animation: shake_541 0.14s 3;
+}
+
+input:valid {
+  border-color: #45feaf;
+  animation: none;
+}
+
+@keyframes shake_541 {
+  0%, 100% {
+    translate: 0;
+  }
+
+  25% {
+    translate: 8px 0;
+  }
+
+  75% {
+    translate: -8px 0;
+  }
+}
+
+
+input:focus {
+    border-color: #ff4081;
+}
+
+button {
+    cursor: pointer;
+    padding: 0.9em 1.4em;
+    min-width: 120px;
+    min-height: 44px;
+    font-size: 1rem;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-weight: 500;
+    transition: 0.8s;
+    background-size: 280% auto;
+    border: none;
+    border-radius: 0.5em;
+    color: #fff;
+    box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.btn-submit {
+    background-image: linear-gradient(325deg, #1f75ff 0%, hsla(194, 100%, 69%, 1) 55%, hsla(217, 100%, 56%, 1) 90%);
+}
+
+.btn-reset {
+    background-image: linear-gradient(325deg, hsla(0, 100%, 56%, 1) 0%, hsla(0, 100%, 69%, 1) 55%, hsla(0, 100%, 56%, 1) 90%);
+    box-shadow: 0px 0px 20px rgba(255, 71, 71, 0.5), 0px 5px 5px -1px rgba(233, 58, 58, 0.25), inset 4px 4px 8px rgba(255, 175, 175, 0.5), inset -4px -4px 8px rgba(216, 19, 19, 0.35);
+}
+
+button:hover {
+    background-position: right top;
+}
+
+button:focus, button:active {
+    outline: none;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px hsla(217, 100%, 56%, 1);
+}
+
+.btn-reset:focus, .btn-reset:active {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px hsla(0, 100%, 56%, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button {
+        transition: linear;
+    }
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    /* color: #00e5ff; */
+}
+
+.bmiForm {
+    font-weight: bold;
+    backdrop-filter: drop-shadow;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 20px 25px 20px;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35); */
+}
